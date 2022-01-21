@@ -14,6 +14,10 @@ const customJestConfig = {
 
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
+  // if you outcomment this, our example.test.js will not work anymore
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+  },
   testEnvironment: 'jest-environment-jsdom',
 }
 
